@@ -1,6 +1,7 @@
 using System.Reflection;
 using CiaAerea.Contexts;
 using CiaAerea.Services;
+using CiaAerea.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CiaAereaContexts>();
 builder.Services.AddTransient<AeronaveService>();
+builder.Services.AddTransient<AdicionarAeronaveValidator>();
+builder.Services.AddTransient<AtualizarAeronaveValidator>();
 
 builder.Services.AddSwaggerGen(options => 
 {

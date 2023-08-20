@@ -14,7 +14,7 @@ public class CiaAereaContexts: DbContext
     public CiaAereaContexts(IConfiguration configuration)
     {
         _configuration = configuration;
-    }
+    }    
 
     public DbSet<Aeronave> Aeronaves => Set<Aeronave>();
     public DbSet<Piloto> Pilotos => Set<Piloto>();
